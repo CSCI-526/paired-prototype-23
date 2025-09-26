@@ -17,9 +17,10 @@ public class CameraFollow2D : MonoBehaviour
         Vector3 desiredPosition = target.position + offset;
 
         // smooth movement
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
-        transform.position = smoothedPosition;
+        //transform.position = smoothedPosition;
+        transform.position = target.position + offset;
 
         // lock z-axis (important for 2D)
         transform.position = new Vector3(transform.position.x, transform.position.y, -10f);

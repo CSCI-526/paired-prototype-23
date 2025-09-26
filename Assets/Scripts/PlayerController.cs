@@ -1,12 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerSlingshotControl : MonoBehaviour
 {
-    [Header("Movement")]
-    public float xVelocity = 5f;   // amount to add to X when left-clicking
+    [Header("Slingshot Settings")]
+    public float forceMultiplier = 0.05f; // adjust strength of launch
 
     private Rigidbody2D rb;
+    private Vector3 dragStartPos;
+    private bool isDragging = false;
 
     void Awake()
     {
@@ -15,16 +17,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // left click
+        if (Input.GetMouseButtonDown(0)) // start drag
         {
-            AddXVelocity();
+            dragStartPos = Input.mousePosition;
+            isDragging = true;
         }
-    }
 
-    private void AddXVelocity()
-    {
-        Vector2 v = rb.velocity;
-        v.x += xVelocity;          // use = xVelocity; if you want a fixed speed instead
-        rb.velocity = v;
+        if (Input.GetMouseButtonUp(0) && isDragging) // release drag
+        {
+            Vector3 dragEndPos = Input.mousePosition;
+            Vector3 dragDelta = dragEndPos - dragStartPos;
+
+            // Opposite direction for slingshot
+            Vector2 launchVelocity = new Vector2(-dragDelta.x, -dragDelta.y) * forceMultiplier;
+
+            rb.velocity = launchVelocity;
+
+            isDragging = false;
+        }
     }
 }
