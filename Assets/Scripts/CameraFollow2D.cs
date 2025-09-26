@@ -23,6 +23,6 @@ public class CameraFollow2D : MonoBehaviour
         transform.position = target.position + offset;
 
         // lock z-axis (important for 2D)
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, -16.7f);
     }
 }
