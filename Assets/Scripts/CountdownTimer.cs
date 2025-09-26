@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement; // for restarting scenes
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class CountdownTimer : MonoBehaviour
         {
             currentTime = 0f;
             isRunning = false;
-            // You can trigger an event here, e.g. GameOver()
+
+            // restart the scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         // Format mm:ss
