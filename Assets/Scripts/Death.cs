@@ -16,7 +16,7 @@ public class Death : MonoBehaviour
     {
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
