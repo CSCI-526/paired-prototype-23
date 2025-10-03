@@ -20,7 +20,7 @@ public class Death : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            Debug.Log("Collided with " + col.gameObject.name);
+            //Debug.Log("Collided with " + col.gameObject.name);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

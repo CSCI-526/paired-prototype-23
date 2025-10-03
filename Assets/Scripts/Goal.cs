@@ -36,7 +36,7 @@ public class Goal : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("End Screen reference is missing in OnTriggerEnter2D!");
+                Debug.LogWarning("No End Screen");
             }
         }
     }
@@ -46,15 +46,14 @@ public class Goal : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int totalScenes = SceneManager.sceneCountInBuildSettings;
 
-        // Only load if there's another scene after this one
+        // Check if it's at the last scene
         if (currentScene + 1 < totalScenes)
         {
             SceneManager.LoadScene(currentScene + 1);
         }
         else
         {
-            Debug.Log("Final scene reached — not loading another scene.");
-            // You can optionally show a "Thanks for playing!" message here
+            Debug.Log("End");
         }
     }
 }
