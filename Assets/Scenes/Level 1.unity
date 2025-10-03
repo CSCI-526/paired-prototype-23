@@ -5338,17 +5338,6 @@ MonoBehaviour:
   maxRotation: 10
   rotationSpeed: 1
   changeInterval: 3
---- !u!114 &1416121083 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2957245228075372501, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
-  m_PrefabInstance: {fileID: 3180758749068162907}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1422255141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5620,20 +5609,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9135387795125746068, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
   m_PrefabInstance: {fileID: 3180758749068162907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1448634499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448634496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1319f3f8319bdfb4b8719ed18597748d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTime: 30
-  timerText: {fileID: 1416121083}
 --- !u!1 &1479567799
 GameObject:
   m_ObjectHideFlags: 0
@@ -7664,6 +7639,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: 40.16568
       objectReference: {fileID: 0}
+    - target: {fileID: 3223809457682451029, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
+      propertyPath: startTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6042577876941074207, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 63.31479
@@ -7712,10 +7691,7 @@ PrefabInstance:
     - {fileID: 3449890972737753598, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9135387795125746068, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1448634499}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d65ac4acce890b543a92d288b1c95d14, type: 3}
 --- !u!1001 &7347692115139064408
 PrefabInstance:
