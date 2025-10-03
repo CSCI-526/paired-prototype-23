@@ -2711,6 +2711,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8249057766295397750, guid: 28d00764f701b494188c46cd450e4334, type: 3}
+      propertyPath: airResistence
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

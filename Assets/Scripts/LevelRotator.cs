@@ -3,8 +3,8 @@ using UnityEngine;
 public class LevelRotator : MonoBehaviour
 {
     [Header("References")]
-    public Transform player;       // assign your player here
-    public Vector3 offset;         // optional offset from player
+    public Transform player;
+    public Vector3 offset;
 
     [Header("Rotation Settings")]
     public float maxRotation = 10f;
@@ -22,10 +22,8 @@ public class LevelRotator : MonoBehaviour
 
     void Update()
     {
-        // world position of rotation pivot
         Vector3 pivotPoint = player.position + offset;
 
-        // countdown for direction switch
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
@@ -33,10 +31,8 @@ public class LevelRotator : MonoBehaviour
             timer = changeInterval;
         }
 
-        // smoothly rotate towards target Z
         float newZ = Mathf.LerpAngle(transform.eulerAngles.z, targetRotation, Time.deltaTime * rotationSpeed);
 
-        // apply rotation around player (with offset)
         transform.RotateAround(pivotPoint, Vector3.forward, newZ - transform.eulerAngles.z);
     }
 }

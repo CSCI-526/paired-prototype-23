@@ -1,11 +1,11 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // for restarting scenes
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
     [Header("Timer Settings")]
-    public float startTime = 60f; // countdown time in seconds
+    public float startTime = 45f;
 
     [Header("UI Reference")]
     public TextMeshProUGUI timerText;
@@ -30,11 +30,9 @@ public class CountdownTimer : MonoBehaviour
             currentTime = 0f;
             isRunning = false;
 
-            // restart the scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        // Format mm:ss
         int minutes = Mathf.FloorToInt(currentTime / 60);
         int seconds = Mathf.FloorToInt(currentTime % 60);
 

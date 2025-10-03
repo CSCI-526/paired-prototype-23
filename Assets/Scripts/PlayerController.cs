@@ -1,12 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerSlingshotControl : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Slingshot Settings")]
-    public float forceMultiplier = 0.05f; // adjust strength of launch
-    public float maxSpeed = 100f;          // clamp upper speed
-    public float dragSpeed = .1f;
+    public float forceMultiplier = .05f;
+    public float maxSpeed = 100f;
+    public float airResistence = .01f;
     public float maxXSpeed = 100f;
 
     private Rigidbody2D rb;
@@ -20,23 +20,21 @@ public class PlayerSlingshotControl : MonoBehaviour
 
     void Update()
     {
-        Vector2 dragAmount = new Vector2(dragSpeed, 0f);
+        Vector2 dragAmount = new Vector2(airResistence, 0f);
         rb.velocity -= dragAmount;
-        if (Input.GetMouseButtonDown(0)) // start drag
+        if (Input.GetMouseButtonDown(0))
         {
             dragStartPos = Input.mousePosition;
             isDragging = true;
         }
 
-        if (Input.GetMouseButtonUp(0) && isDragging) // release drag
+        if (Input.GetMouseButtonUp(0) && isDragging)
         {
             Vector3 dragEndPos = Input.mousePosition;
             Vector3 dragDelta = dragEndPos - dragStartPos;
 
-            // Opposite direction for slingshot
             Vector2 launchVelocity = new Vector2(-dragDelta.x, -dragDelta.y) * forceMultiplier;
 
-            // Clamp speed between 0 and maxSpeed
             if (launchVelocity.magnitude > maxSpeed)
                 launchVelocity = launchVelocity.normalized * maxSpeed;
 
