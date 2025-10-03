@@ -27880,7 +27880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: END OF PROTOTYPE!
+  m_text: GGWP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -73521,12 +73521,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1349
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 524
+      value: 0.000061035
       objectReference: {fileID: 0}
     - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -73534,7 +73550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6088643517417976397, guid: c28e5abc4c3b503418ae3fba67e5b600, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000030518
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
